@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Passions & Lifestyle</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Tech blue
+                        wood: '#8b5a2b', // Wood brown
+                        sport: '#10b981', // Energy green
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-card img {
+            transition: transform 0.5s ease;
+        }
+        .photo-card:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="font-bold text-2xl tracking-tighter text-gray-900">My <span class="text-primary">Portfolio</span></h1>
+            <nav class="flex space-x-6 font-medium text-sm md:text-base">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#passions" class="hover:text-primary transition-colors">Passions</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Photo Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 min-h-[75vh] flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <span class="bg-primary/20 text-blue-400 text-sm font-semibold px-4 py-1.5 rounded-full border border-blue-500/30 uppercase tracking-widest inline-block mb-4">Welcome to my world</span>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Nicolas</span>
+            </h2>
+            <h1>your favourite coder!</h1>           <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Coding, Woodworking, Cycling & Fitness. i like to combine digital precision with real-world craftsmanship
+            </p>
+            <div class="flex justify-center">
+                <a href="#gallery" class="bg-primary text-white px-8 py-3.5 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="passions" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">What Drives Me</h3>
+                <p class="text-gray-500">The core activities and interests that shape my daily life</p>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100 fade-in">
+                    <div class="w-12 h-12 bg-blue-100 text-primary rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Computer Science</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Building software and exploring new technologies. Code is my "mental workout"!                    </p>
+                </div>
+
+               
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100 fade-in">
+                    <div class="w-12 h-12 bg-amber-100 text-wood rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Woodworking</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                         Transforming firewood into finished pieces with my own hands, i'm a self learner.
+                    </p>
+                </div>
+
+               
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100 fade-in">
+                    <div class="w-12 h-12 bg-emerald-100 text-sport rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-bicycle"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Cycling</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Hitting the road to explore new places, clear my mind , and build endurance outdoors.
+                    </p>
+                </div>
+
+                <!-- Gym & Fitness Card -->
+                <div class="card-hover bg-gray-50 rounded-2xl p-6 border border-gray-100 fade-in">
+                    <div class="w-12 h-12 bg-red-100 text-red-500 rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Gym & Fitness</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Discipline, strength, and continuous improvement. Dont leave the gains on the table!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="gallery" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Visual Gallery</h3>
+                <p class="text-gray-600">A snapshot of my daily lifestyle and active projects</p>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80" alt="Woodworking" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-1">Woodworking</span>
+                        <h4 class="text-white text-xl font-bold">Craftsmanship & Precision</h4>
+                    </div>
+                </div>
+
+               
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-red-400 text-xs font-semibold uppercase tracking-wider mb-1">Gym</span>
+                        <h4 class="text-white text-xl font-bold">Strength & Discipline</h4>
+                    </div>
+                </div>
+
+              
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80" alt="Cycling" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-1">Cycling</span>
+                        <h4 class="text-white text-xl font-bold">Roads & Exploration</h4>
+                    </div>
+                </div>
+
+                
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Coding" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-blue-400 text-xs font-semibold uppercase tracking-wider mb-1">Tech</span>
+                        <h4 class="text-white text-xl font-bold">Coding & Projects</h4>
+                    </div>
+                </div>
+
+                
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Woodworking Tools" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-1">Workshop</span>
+                        <h4 class="text-white text-xl font-bold"> Wood Designs</h4>
+                    </div>
+                </div>
+
+                
+                <div class="photo-card relative rounded-2xl overflow-hidden shadow-md group h-72 fade-in">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80" alt="Weights" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-red-400 text-xs font-semibold uppercase tracking-wider mb-1">Training</span>
+                        <h4 class="text-white text-xl font-bold">Consistency & Gains</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Footer -->
+    <footer class="bg-gray-900 text-white py-10 text-center border-t border-gray-800">
+        <p class="text-gray-400 text-sm">
+            &copy; 2026 <span class="text-white font-medium">Nicolas</span>. a real portfolio.
+        </p>
+    </footer>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const hiddenElements = document.querySelectorAll('.fade-in');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
+
